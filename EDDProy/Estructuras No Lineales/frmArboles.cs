@@ -175,7 +175,7 @@ namespace EDDemo.Estructuras_No_Lineales
 
             txtDato.Text = "";
         }
-
+        //
         private void btnBusqueda_Click_1(object sender, EventArgs e)
         {
             if (int.TryParse(txtDato.Text, out int valor))
