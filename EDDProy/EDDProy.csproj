@@ -52,6 +52,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estructuras Lineales\Clases\Colas.cs" />
+    <Compile Include="Estructuras Lineales\Clases\ListaCircular.cs" />
+    <Compile Include="Estructuras Lineales\Clases\ListaCircularDoble.cs" />
+    <Compile Include="Estructuras Lineales\Clases\ListasDobles.cs" />
+    <Compile Include="Estructuras Lineales\Clases\ListaSimple.cs" />
+    <Compile Include="Estructuras Lineales\Clases\NodoCola.cs" />
+    <Compile Include="Estructuras Lineales\Clases\NodoDoble.cs" />
+    <Compile Include="Estructuras Lineales\FrmColas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\FrmColas.Designer.cs">
+      <DependentUpon>FrmColas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\FrmListasCirculares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\FrmListasCirculares.Designer.cs">
+      <DependentUpon>FrmListasCirculares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\FrmListaDobles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\FrmListaDobles.Designer.cs">
+      <DependentUpon>FrmListaDobles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\FrmListasCircularesDobles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\FrmListasCircularesDobles.Designer.cs">
+      <DependentUpon>FrmListasCircularesDobles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\FrmListasSimples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\FrmListasSimples.Designer.cs">
+      <DependentUpon>FrmListasSimples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\FrmPilas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\FrmPilas.Designer.cs">
+      <DependentUpon>FrmPilas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Graphviz.c.cs" />
     <Compile Include="Estructuras Lineales\Clases\Listas.cs" />
     <Compile Include="Estructuras Lineales\Clases\Nodo.cs" />
@@ -76,14 +119,124 @@
     <Compile Include="frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Estructuras Lineales\frmPilas.cs">
+    <Compile Include="Metodos de Busqueda\Clases\Hash.cs" />
+    <Compile Include="Metodos de Busqueda\FrmHash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Estructuras Lineales\frmPilas.Designer.cs">
-      <DependentUpon>frmPilas.cs</DependentUpon>
+    <Compile Include="Metodos de Busqueda\FrmHash.Designer.cs">
+      <DependentUpon>FrmHash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\Clases\Burbuja.cs" />
+    <Compile Include="Metodos de Ordenamiento\Clases\Intercalacion.cs" />
+    <Compile Include="Metodos de Ordenamiento\Clases\MezclaDirecta.cs" />
+    <Compile Include="Metodos de Ordenamiento\Clases\MezclaNatural.cs" />
+    <Compile Include="Metodos de Ordenamiento\Clases\QuickSort.cs" />
+    <Compile Include="Metodos de Ordenamiento\Clases\Radix.cs" />
+    <Compile Include="Metodos de Ordenamiento\Clases\ShellSort.cs" />
+    <Compile Include="Metodos de Ordenamiento\FrmBurbuja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmBurbuja.Designer.cs">
+      <DependentUpon>FrmBurbuja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmIntercalacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmIntercalacion.Designer.cs">
+      <DependentUpon>FrmIntercalacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmMezclaDirecta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmMezclaDirecta.Designer.cs">
+      <DependentUpon>FrmMezclaDirecta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmMezclaNatural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmMezclaNatural.Designer.cs">
+      <DependentUpon>FrmMezclaNatural.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmQuickSort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmQuickSort.Designer.cs">
+      <DependentUpon>FrmQuickSort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmRadix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmRadix.Designer.cs">
+      <DependentUpon>FrmRadix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmShellSort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de Ordenamiento\FrmShellSort.Designer.cs">
+      <DependentUpon>FrmShellSort.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursividad\FrmBusquedaBinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\FrmBusquedaBinaria.Designer.cs">
+      <DependentUpon>FrmBusquedaBinaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursividad\Clases\BusquedaBinaria.cs" />
+    <Compile Include="Recursividad\Clases\Factorial.cs" />
+    <Compile Include="Recursividad\Clases\Fibonacci.cs" />
+    <Compile Include="Recursividad\Clases\Potencia.cs" />
+    <Compile Include="Recursividad\Clases\SumarArreglos.cs" />
+    <Compile Include="Recursividad\Clases\TorresDeHanoi.cs" />
+    <Compile Include="Recursividad\FrmFactorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\FrmFactorial.Designer.cs">
+      <DependentUpon>FrmFactorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursividad\FrmFibonacci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\FrmFibonacci.Designer.cs">
+      <DependentUpon>FrmFibonacci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursividad\FrmPotencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\FrmPotencia.Designer.cs">
+      <DependentUpon>FrmPotencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursividad\FrmSumarArreglos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\FrmSumarArreglos.Designer.cs">
+      <DependentUpon>FrmSumarArreglos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursividad\FrmTorresDeHanoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\FrmTorresDeHanoi.Designer.cs">
+      <DependentUpon>FrmTorresDeHanoi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Estructuras Lineales\FrmColas.resx">
+      <DependentUpon>FrmColas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\FrmListaDobles.resx">
+      <DependentUpon>FrmListaDobles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\FrmListasCirculares.resx">
+      <DependentUpon>FrmListasCirculares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\FrmListasCircularesDobles.resx">
+      <DependentUpon>FrmListasCircularesDobles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\FrmListasSimples.resx">
+      <DependentUpon>FrmListasSimples.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\FrmPilas.resx">
+      <DependentUpon>FrmPilas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Estructuras No Lineales\frmArboles.resx">
       <DependentUpon>frmArboles.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,8 +246,29 @@
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Estructuras Lineales\frmPilas.resx">
-      <DependentUpon>frmPilas.cs</DependentUpon>
+    <EmbeddedResource Include="Metodos de Busqueda\FrmHash.resx">
+      <DependentUpon>FrmHash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de Ordenamiento\FrmBurbuja.resx">
+      <DependentUpon>FrmBurbuja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de Ordenamiento\FrmIntercalacion.resx">
+      <DependentUpon>FrmIntercalacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de Ordenamiento\FrmMezclaDirecta.resx">
+      <DependentUpon>FrmMezclaDirecta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de Ordenamiento\FrmMezclaNatural.resx">
+      <DependentUpon>FrmMezclaNatural.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de Ordenamiento\FrmQuickSort.resx">
+      <DependentUpon>FrmQuickSort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de Ordenamiento\FrmRadix.resx">
+      <DependentUpon>FrmRadix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de Ordenamiento\FrmShellSort.resx">
+      <DependentUpon>FrmShellSort.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,6 +279,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Recursividad\FrmBusquedaBinaria.resx">
+      <DependentUpon>FrmBusquedaBinaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursividad\FrmFactorial.resx">
+      <DependentUpon>FrmFactorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursividad\FrmFibonacci.resx">
+      <DependentUpon>FrmFibonacci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursividad\FrmPotencia.resx">
+      <DependentUpon>FrmPotencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursividad\FrmSumarArreglos.resx">
+      <DependentUpon>FrmSumarArreglos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursividad\FrmTorresDeHanoi.resx">
+      <DependentUpon>FrmTorresDeHanoi.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,5 +311,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

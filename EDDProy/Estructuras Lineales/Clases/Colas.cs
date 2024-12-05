@@ -5,68 +5,77 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EDDemo
+namespace EDDemo.Estructuras_Lineales.Clases
 {
-    public class Pilas
+    internal class Colas
     {
-        public Nodo Top;
-        public Pilas()
+
+        public Nodo first;
+        public Nodo last;
+
+        public Colas()
         {
-            Top = null;
+            first = null;
+            last = null;
         }
         public bool estaVacio()
         {
-            return Top == null;
+            return first == null;
         }
-        // Método para añadir un elemento (Push)
-        public int Push(string dato)
+        // Método para encolar (Queue)
+        public int Queue(string dato)
         {
             int operaciones = 0;
             Nodo nuevo = new Nodo(dato);
             operaciones++;
 
-            if (Top == null)
+            if (last == null)
             {
-                Top = nuevo;
-                operaciones++;
+                last = nuevo;
+                first = nuevo;
+                operaciones += 2;
             }
             else
             {
-                Nodo Temp = Top;
-                Top = nuevo;
-                Top.Sig = Temp;
+                last.Sig = nuevo;
+                last = nuevo;
                 operaciones += 2;
             }
             return operaciones;
         }
 
-        // Método para eliminar un elemento (Pop)
-        public (string, int) Pop()
+        // Método para desencolar (Dequeue)
+        public (string, int) Dequeue()
         {
             int operaciones = 0;
-            if (Top == null)
+            if (first == null)
             {
                 operaciones++;
-                return ("Pila vacía", operaciones);
+                return ("Cola vacía", operaciones);
             }
             else
             {
-                Nodo temp = Top;
-                Top = Top.Sig;
-                string Dato = temp.Dato;
-                temp = null;
-                operaciones += 3;
-                return (Dato, operaciones);
+                Nodo temp = first;
+                first = first.Sig;
+                string dato = temp.Dato;
+                operaciones += 2;
+
+                if (first == null)
+                {
+                    last = null;
+                    operaciones++;
+                }
+                return (dato, operaciones);
             }
         }
 
-        // Método para buscar un elemento
+        // Método para buscar un elemento en la cola
         public (int, int) Buscar(string valor)
         {
             int operaciones = 0;
-            if (Top == null) return (-1, operaciones);
+            if (first == null) return (-1, operaciones);
 
-            Nodo actual = Top;
+            Nodo actual = first;
             int pos = 1;
             operaciones++;
 
@@ -83,13 +92,13 @@ namespace EDDemo
             return (-1, operaciones); // No encontrado
         }
 
-        // Método para recorrer la pila
+        // Método para recorrer la cola
         public (string, int) Recorrer()
         {
             int operaciones = 0;
-            if (Top == null) return ("Pila vacía", operaciones);
+            if (first == null) return ("Cola vacía", operaciones);
 
-            Nodo actual = Top;
+            Nodo actual = first;
             string resultado = "";
             operaciones++;
 
@@ -99,21 +108,24 @@ namespace EDDemo
                 actual = actual.Sig;
                 operaciones++;
             }
-            resultado += "null";
+            resultado += "Null";
             return (resultado, operaciones);
         }
         public void Vaciar()
         {
             if (estaVacio())
             {
-                MessageBox.Show("La pila ya está vacía");
+                MessageBox.Show("La cola ya está vacía");
                 return;
             }
+
+            // Mientras haya nodos, dequeue a cada uno
             while (!estaVacio())
             {
-                Pop();
+                Dequeue();
             }
-            MessageBox.Show("La pila ha sido vaciada");
+
+            MessageBox.Show("La cola ha sido vaciada");
         }
     }
 }

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using EDDemo.Estructuras_Lineales.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,17 +12,18 @@ using System.Windows.Forms;
 
 namespace EDDemo.Estructuras_Lineales
 {
-    public partial class FrmPila : Form
+    public partial class FrmListasSimples : Form
     {
-        Pilas pila = new Pilas();
-        public FrmPila()
+        ListaSimple lista = new ListaSimple();
+        public FrmListasSimples()
         {
             InitializeComponent();
         }
-        private void ActualizarPila()
+        // Método para actualizar y mostrar la lista en el TextBox de resultados
+        private void ActualizarLista()
         {
-            var (recorrido, _) = pila.Recorrer();
-            TxResultado.Text = recorrido;  // Mostrar el contenido de la pila en el TextBox de resultados
+            var (recorrido, _) = lista.Recorrer();
+            TxResultado.Text = recorrido;  // Mostrar el contenido de la lista en el TextBox de resultados
         }
 
         // Método para mostrar el tiempo y operaciones en el TextBox de información
@@ -32,8 +33,12 @@ namespace EDDemo.Estructuras_Lineales
             long tiempoTicks = stopwatch.ElapsedTicks;
             TxInfo.Text = $"Tiempo: {tiempoMs} ms, {tiempoTicks} ticks, Operaciones: {operaciones}";
         }
+        private void BtInsetarInicio_Click(object sender, EventArgs e)
+        {
 
-        private void BtAñadir_Click(object sender, EventArgs e)
+        }
+
+        private void BtInsetarFinal_Click(object sender, EventArgs e)
         {
 
         }
@@ -43,15 +48,19 @@ namespace EDDemo.Estructuras_Lineales
 
         }
 
-        private void BtEliminar_Click(object sender, EventArgs e)
+        private void BtEliminarDato_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void BtPilaVaciar_Click(object sender, EventArgs e)
+        private void BtInsetarPosicion_Click(object sender, EventArgs e)
         {
-            pila.Vaciar();
-            ActualizarPila();
+
+        }
+
+        private void BtListaVaciar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

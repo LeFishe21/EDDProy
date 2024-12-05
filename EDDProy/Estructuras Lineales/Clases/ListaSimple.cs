@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EDDemo
+namespace EDDemo.Estructuras_Lineales.Clases
 {
-    class Listas
+    public class ListaSimple
     {
         public Nodo Cabeza;
-        public Listas()
+        public ListaSimple()
         {
             Cabeza = null;
         }
