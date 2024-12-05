@@ -20,7 +20,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
         {
             return Start == null;
         }
-        // Método para insertar en una posición específica
+        // Insertar en posición especifica
         public int Insertar(string valor, int pos)
         {
             int operaciones = 0;
@@ -73,7 +73,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return operaciones;
         }
 
-        // Método para recorrer la lista hacia adelante
+        // Recorrer hacía delante
         public (string, int) RecorrerAdelante()
         {
             int operaciones = 0;
@@ -96,7 +96,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return (resultado, operaciones);
         }
 
-        // Método para recorrer la lista hacia atrás
+        // Recorrer hacía atras
         public (string, int) RecorrerAtras()
         {
             int operaciones = 0;
@@ -119,7 +119,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return (resultado, operaciones);
         }
 
-        // Método para eliminar en una posición específica
+        // Eliminar posición especifica
         public int Eliminar(int pos)
         {
             int operaciones = 0;
@@ -146,7 +146,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return operaciones;
         }
 
-        // Método para buscar un valor en la lista
+        // Buscar un valor
         public (int, int) Buscar(string valor)
         {
             int operaciones = 0;

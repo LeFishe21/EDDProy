@@ -58,13 +58,15 @@
             // 
             this.btEjecutarHanoi.BackColor = System.Drawing.Color.Pink;
             this.btEjecutarHanoi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btEjecutarHanoi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEjecutarHanoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEjecutarHanoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEjecutarHanoi.Location = new System.Drawing.Point(370, 185);
             this.btEjecutarHanoi.Name = "btEjecutarHanoi";
             this.btEjecutarHanoi.Size = new System.Drawing.Size(75, 34);
             this.btEjecutarHanoi.TabIndex = 36;
             this.btEjecutarHanoi.Text = "Ejecutar";
             this.btEjecutarHanoi.UseVisualStyleBackColor = false;
+            this.btEjecutarHanoi.Click += new System.EventHandler(this.btEjecutarHanoi_Click);
             // 
             // labelPedirDiscos
             // 

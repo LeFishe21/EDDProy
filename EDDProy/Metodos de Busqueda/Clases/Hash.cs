@@ -10,16 +10,16 @@ namespace EDDemo.Metodos_de_Busqueda.Clases
 {
     internal class Hash
     {
-        private const int TAMANIO = 100; // Tamaño fijo de la tabla hash
-        private int[] claves;           // Almacena las claves generadas
-        private string[] valores;       // Almacena los productos
-        private ListaSimple[] tabla; // Usar ListaSimple para resolver colisiones
+        private const int TAMANIO = 100;
+        private int[] claves;
+        private string[] valores;
+        private ListaSimple[] tabla;
         public Hash()
         {
             tabla = new ListaSimple[TAMANIO];
             for (int i = 0; i < TAMANIO; i++)
             {
-                tabla[i] = new ListaSimple(); // Inicializar cada índice con una lista simple
+                tabla[i] = new ListaSimple();
             }
         }
 
@@ -29,7 +29,7 @@ namespace EDDemo.Metodos_de_Busqueda.Clases
             return clave % TAMANIO;
         }
 
-        // Función hash polinomial para cadenas
+        // Función hash polinomial
         public static int FuncionHashPolinomial(string clave, int tamanioTabla)
         {
             const int basePolinomial = 31;
@@ -45,15 +45,15 @@ namespace EDDemo.Metodos_de_Busqueda.Clases
         public void Insertar(int clave, string valor)
         {
             int indice = FuncionHash(clave);
-            tabla[indice].InsertarFinal(valor); // Insertar el valor al final de la lista en caso de colisión
+            tabla[indice].InsertarFinal(valor);
         }
 
-        // Buscar valores por su clave
+        // Buscar el valor por su clave
         public string Buscar(int clave)
         {
             int indice = FuncionHash(clave);
-            var resultado = tabla[indice].ToString(); // Devolver todos los elementos de la lista como cadena
-            return resultado != " -> null" ? resultado : null; // Verificar si la lista contiene elementos
+            var resultado = tabla[indice].ToString();
+            return resultado != " -> null" ? resultado : null;
         }
 
         // Guardar claves y valores en un archivo
@@ -70,15 +70,14 @@ namespace EDDemo.Metodos_de_Busqueda.Clases
                 }
             }
         }
-        // Vaciar toda la tabla hash
         public void VaciarTabla()
         {
             for (int i = 0; i < TAMANIO; i++)
             {
-                tabla[i].VaciarHash(); // Vaciar cada lista simple
+                tabla[i].VaciarHash();
             }
         }
-        // Cargar claves y valores desde un archivo
+        // Cargar claves y valores
         public void CargarDesdeArchivo(string ruta)
         {
             if (File.Exists(ruta))

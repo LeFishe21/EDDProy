@@ -13,13 +13,13 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
         {
             if (lista.estaVacio()) return;
 
-            // Convertir la lista a un arreglo
+            // Se convierte la lista en un arreglo
             int[] valores = ConvertirListaAArreglo(lista);
 
             // Aplicar el algoritmo Shellsort
             Shellsort(valores);
 
-            // Reconstruir la lista con los elementos ordenados
+            // Rehacer la lista con los elemntos ordenados
             ReconstruirListaDesdeArreglo(lista, valores);
         }
 
@@ -28,10 +28,8 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
         {
             int n = valores.Length;
 
-            // Inicializamos el gap
             int gap = n / 2;
 
-            // Mientras el gap sea mayor a 0
             while (gap > 0)
             {
                 for (int i = gap; i < n; i++)
@@ -48,13 +46,11 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
 
                     valores[j] = temp;
                 }
-
-                // Reducimos el gap
                 gap /= 2;
             }
         }
 
-        // Convertir una ListaSimple a un arreglo de enteros
+        // Lista simple a un arreglo de enteros
         private static int[] ConvertirListaAArreglo(ListaSimple lista)
         {
             List<int> elementos = new List<int>();
@@ -62,21 +58,20 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
 
             while (actual != null)
             {
-                elementos.Add(int.Parse(actual.Dato)); // Convertimos cada dato a entero
+                elementos.Add(int.Parse(actual.Dato));
                 actual = actual.Sig;
             }
 
             return elementos.ToArray();
         }
 
-        // Reconstruir la lista desde un arreglo de enteros
         private static void ReconstruirListaDesdeArreglo(ListaSimple lista, int[] arreglo)
         {
-            lista.Vaciar(); // Vaciar la lista original
+            lista.Vaciar();
 
             foreach (int elemento in arreglo)
             {
-                lista.InsertarFinal(elemento.ToString()); // Insertar cada elemento en la lista como cadena
+                lista.InsertarFinal(elemento.ToString());
             }
         }
     }

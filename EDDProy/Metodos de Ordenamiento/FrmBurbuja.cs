@@ -21,6 +21,13 @@ namespace EDDemo.Metodos_de_Ordenamiento
             InitializeComponent();
         }
 
+
+        private void ActualizarLista()
+        {
+            var (recorrido, _) = lista.Recorrer();
+            txtLista.Text = recorrido;  // Mostrar el contenido de la lista en el TextBox de resultados
+        }
+
         private void btnGenerarLista_Click(object sender, EventArgs e)
         {
             int cantidad;
@@ -74,11 +81,6 @@ namespace EDDemo.Metodos_de_Ordenamiento
             txtListaOrdenada.Text = lista.ToString(); // Llama al método ToString() de la clase ListaSimple
 
             txtTiempo.Text = $"{stopwatch.ElapsedTicks} ticks";
-        }
-        private void ActualizarLista()
-        {
-            var (recorrido, _) = lista.Recorrer();
-            txtLista.Text = recorrido;  // Mostrar el contenido de la lista en el TextBox de resultados
         }
     }
 }

@@ -21,6 +21,8 @@ namespace EDDemo.Metodos_de_Ordenamiento
             InitializeComponent();
         }
 
+
+
         private void BtnGenerarLista_Click(object sender, EventArgs e)
         {
             int cantidad;

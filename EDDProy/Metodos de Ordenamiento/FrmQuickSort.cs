@@ -20,28 +20,7 @@ namespace EDDemo.Metodos_de_Ordenamiento
             InitializeComponent();
         }
 
-        private void BtnGenerarLista_Click(object sender, EventArgs e)
-        {
-            int cantidad;
-            if (int.TryParse(TxtNumeroElementos.Text, out cantidad) && cantidad > 0)
-            {
-                ListaSimple lista = new ListaSimple();
-                Random random = new Random();
-
-                for (int i = 0; i < cantidad; i++)
-                {
-                    int numero = random.Next(1, 100);
-                    lista.InsertarFinal(numero.ToString());
-                }
-
-                // Mostrar la lista generada en el TextBox
-                TxtLista.Text = lista.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Ingresa un número válido.");
-            }
-        }
+       
         private ListaSimple CrearListaDesdeTextBox(string texto)
         {
             ListaSimple lista = new ListaSimple();
@@ -78,6 +57,36 @@ namespace EDDemo.Metodos_de_Ordenamiento
 
             return lista;
         }
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnGenerarLista_Click(object sender, EventArgs e)
+        {
+            int cantidad;
+            if (int.TryParse(TxtNumeroElementos.Text, out cantidad) && cantidad > 0)
+            {
+                ListaSimple lista = new ListaSimple();
+                Random random = new Random();
+
+                for (int i = 0; i < cantidad; i++)
+                {
+                    int numero = random.Next(1, 100);
+                    lista.InsertarFinal(numero.ToString());
+                }
+
+                // Mostrar la lista generada en el TextBox
+                TxtLista.Text = lista.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Ingresa un número válido.");
+            }
+        }
+
         private void BtnOrdenarLista_Click(object sender, EventArgs e)
         {
             // Verificamos que haya datos en el cuadro de texto
@@ -117,11 +126,6 @@ namespace EDDemo.Metodos_de_Ordenamiento
 
             // Mostrar el tiempo de ejecución
             txtTiempo.Text = $"{stopwatch.ElapsedTicks} ticks";
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

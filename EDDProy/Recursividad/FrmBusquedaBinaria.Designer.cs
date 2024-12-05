@@ -94,13 +94,15 @@
             // 
             this.btBuscarEnArreglo.BackColor = System.Drawing.Color.Pink;
             this.btBuscarEnArreglo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btBuscarEnArreglo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscarEnArreglo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBuscarEnArreglo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btBuscarEnArreglo.Location = new System.Drawing.Point(522, 308);
             this.btBuscarEnArreglo.Name = "btBuscarEnArreglo";
             this.btBuscarEnArreglo.Size = new System.Drawing.Size(136, 34);
             this.btBuscarEnArreglo.TabIndex = 54;
             this.btBuscarEnArreglo.Text = "Buscar";
             this.btBuscarEnArreglo.UseVisualStyleBackColor = false;
+            this.btBuscarEnArreglo.Click += new System.EventHandler(this.btBuscarEnArreglo_Click);
             // 
             // PedirNumeroBusquedaBinaria
             // 
@@ -140,13 +142,15 @@
             // 
             this.btGenerarArreglo.BackColor = System.Drawing.Color.Pink;
             this.btGenerarArreglo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btGenerarArreglo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGenerarArreglo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btGenerarArreglo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btGenerarArreglo.Location = new System.Drawing.Point(522, 156);
             this.btGenerarArreglo.Name = "btGenerarArreglo";
             this.btGenerarArreglo.Size = new System.Drawing.Size(136, 34);
             this.btGenerarArreglo.TabIndex = 49;
             this.btGenerarArreglo.Text = "Generar Arreglo";
             this.btGenerarArreglo.UseVisualStyleBackColor = false;
+            this.btGenerarArreglo.Click += new System.EventHandler(this.btGenerarArreglo_Click);
             // 
             // PedirElementosBusquedaBinaria
             // 

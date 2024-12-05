@@ -25,27 +25,27 @@ namespace EDDemo.Estructuras_Lineales.Clases
             Nodo nuevo = new Nodo(dato);
             int operaciones = 0;
 
-            // Caso 1: Lista vacía
+            // Lista vacía
             if (Inicio == null && Fin == null)
             {
                 Inicio = nuevo;
                 Fin = nuevo;
-                Fin.Sig = Inicio; // Mantener la circularidad
+                Fin.Sig = Inicio;
                 operaciones++;
                 return operaciones;
             }
 
-            // Caso 2: Insertar en la primera posición
+            // Insertar en la primera posición
             if (posicion == 0 || posicion == 1)
             {
                 nuevo.Sig = Inicio;
                 Inicio = nuevo;
-                Fin.Sig = Inicio; // Mantener la circularidad
+                Fin.Sig = Inicio;
                 operaciones += 2;
                 return operaciones;
             }
 
-            // Caso 3: Insertar en una posición mayor
+            // Insertar en una posición mayor
             int pos = 1;
             Nodo aux = Inicio;
             Nodo previo = null;
@@ -58,7 +58,6 @@ namespace EDDemo.Estructuras_Lineales.Clases
                 operaciones++;
             }
 
-            // Si la posición es válida
             if (pos == posicion)
             {
                 nuevo.Sig = aux;
@@ -68,13 +67,13 @@ namespace EDDemo.Estructuras_Lineales.Clases
                 }
                 operaciones++;
 
-                if (aux == Inicio) // Si es el último nodo
+                if (aux == Inicio)
                 {
                     Fin = nuevo;
                     operaciones++;
                 }
             }
-            else if (aux.Sig == Inicio) // Insertar al final
+            else if (aux.Sig == Inicio)
             {
                 Fin.Sig = nuevo;
                 nuevo.Sig = Inicio;
@@ -89,7 +88,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return operaciones;
         }
 
-        // Método para recorrer e imprimir la lista
+        // Recorrer e imprimir lista
         public (string, int) Recorrer()
         {
             string resultado = "";
@@ -113,7 +112,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return (resultado, operaciones);
         }
 
-        // Método para eliminar un nodo en una posición específica
+        // Eliminar nodo en posición especifica
         public int Eliminar(int posicion)
         {
             int operaciones = 0;
@@ -138,25 +137,25 @@ namespace EDDemo.Estructuras_Lineales.Clases
 
             if (pos == posicion)
             {
-                if (aux == Inicio && aux == Fin) // Lista con un solo nodo
+                if (aux == Inicio && aux == Fin)
                 {
                     Inicio = null;
                     Fin = null;
                     operaciones++;
                 }
-                else if (aux == Inicio) // Eliminar el primer nodo
+                else if (aux == Inicio)
                 {
                     Inicio = aux.Sig;
                     Fin.Sig = Inicio;
                     operaciones++;
                 }
-                else if (aux == Fin) // Eliminar el último nodo
+                else if (aux == Fin)
                 {
                     Fin = previo;
                     Fin.Sig = Inicio;
                     operaciones++;
                 }
-                else // Eliminar un nodo intermedio
+                else
                 {
                     previo.Sig = aux.Sig;
                     operaciones++;
@@ -170,7 +169,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return operaciones;
         }
 
-        // Método para buscar un valor y devolver su posición
+        // Buscar valor y dar su posición
         public (int, int) Buscar(string valor)
         {
             int operaciones = 0;

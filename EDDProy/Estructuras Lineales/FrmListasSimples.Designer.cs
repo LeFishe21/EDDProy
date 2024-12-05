@@ -69,6 +69,7 @@
             this.BtInsetarPosicion.TabIndex = 74;
             this.BtInsetarPosicion.Text = "Insetar en posicion";
             this.BtInsetarPosicion.UseVisualStyleBackColor = false;
+            this.BtInsetarPosicion.Click += new System.EventHandler(this.BtInsetarPosicion_Click);
             // 
             // BtInsetarFinal
             // 
@@ -80,6 +81,7 @@
             this.BtInsetarFinal.TabIndex = 73;
             this.BtInsetarFinal.Text = "Insetar Final";
             this.BtInsetarFinal.UseVisualStyleBackColor = false;
+            this.BtInsetarFinal.Click += new System.EventHandler(this.BtInsetarFinal_Click);
             // 
             // TxInfo
             // 
@@ -125,6 +127,7 @@
             this.BtEliminarDato.TabIndex = 68;
             this.BtEliminarDato.Text = "Eliminar un Dato";
             this.BtEliminarDato.UseVisualStyleBackColor = false;
+            this.BtEliminarDato.Click += new System.EventHandler(this.BtEliminarDato_Click);
             // 
             // BtBuscar
             // 
@@ -136,6 +139,7 @@
             this.BtBuscar.TabIndex = 67;
             this.BtBuscar.Text = "Buscar";
             this.BtBuscar.UseVisualStyleBackColor = false;
+            this.BtBuscar.Click += new System.EventHandler(this.BtBuscar_Click);
             // 
             // BtInsetarInicio
             // 
@@ -147,6 +151,7 @@
             this.BtInsetarInicio.TabIndex = 66;
             this.BtInsetarInicio.Text = "Insetar Inicio";
             this.BtInsetarInicio.UseVisualStyleBackColor = false;
+            this.BtInsetarInicio.Click += new System.EventHandler(this.BtInsetarInicio_Click);
             // 
             // TxResultado
             // 
@@ -161,13 +166,14 @@
             // 
             this.BtListaVaciar.BackColor = System.Drawing.Color.Pink;
             this.BtListaVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtListaVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtListaVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtListaVaciar.Location = new System.Drawing.Point(24, 36);
             this.BtListaVaciar.Name = "BtListaVaciar";
             this.BtListaVaciar.Size = new System.Drawing.Size(97, 48);
             this.BtListaVaciar.TabIndex = 64;
             this.BtListaVaciar.Text = "Limpiar";
             this.BtListaVaciar.UseVisualStyleBackColor = false;
+            this.BtListaVaciar.Click += new System.EventHandler(this.BtListaVaciar_Click);
             // 
             // FrmListasSimples
             // 

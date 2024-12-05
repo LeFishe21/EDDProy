@@ -77,13 +77,15 @@
             // 
             this.EntrarBoton.BackColor = System.Drawing.Color.Pink;
             this.EntrarBoton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EntrarBoton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EntrarBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EntrarBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.EntrarBoton.Location = new System.Drawing.Point(404, 309);
             this.EntrarBoton.Name = "EntrarBoton";
             this.EntrarBoton.Size = new System.Drawing.Size(75, 34);
             this.EntrarBoton.TabIndex = 31;
             this.EntrarBoton.Text = "Ejecutar";
             this.EntrarBoton.UseVisualStyleBackColor = false;
+            this.EntrarBoton.Click += new System.EventHandler(this.EntrarBoton_Click);
             // 
             // LabelPedirBase
             // 

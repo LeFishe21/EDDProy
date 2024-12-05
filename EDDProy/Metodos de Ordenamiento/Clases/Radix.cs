@@ -13,7 +13,7 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
         {
             if (lista.estaVacio()) return;
 
-            // Convertir ListaSimple a un arreglo de enteros
+            // Se convierte la lista en un arreglo de enteros
             List<int> valores = new List<int>();
             Nodo actual = lista.Cabeza;
             while (actual != null)
@@ -29,7 +29,6 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
             int[] array = valores.ToArray();
             RadixSort(array);
 
-            // Reemplazar los valores de la ListaSimple con los del arreglo ordenado
             lista.Vaciar();
             foreach (int numero in array)
             {

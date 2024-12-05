@@ -16,14 +16,11 @@ namespace EDDemo.Recursividad.Clases
                 return;
             }
 
-            // Mover n-1 discos de la torre de origen a la torre auxiliar
-            MoverDiscos(n - 1, origen, auxiliar, destino, resultado);
+            MoverDiscos(n - 1, origen, auxiliar, destino, resultado); // mover los discos a la torre auxiliar
 
-            // Mover el disco restante de la torre de origen a la torre de destino
-            resultado.AppendLine($" Mover disco {n} de {origen} a {destino},");
+            resultado.AppendLine($" Mover disco {n} de {origen} a {destino},"); // Mover los discos restantes al destino
 
-            // Mover los n-1 discos de la torre auxiliar a la torre de destino
-            MoverDiscos(n - 1, auxiliar, destino, origen, resultado);
+            MoverDiscos(n - 1, auxiliar, destino, origen, resultado); // Mover los discors de la auxiliar al destino
         }
     }
 }

@@ -35,6 +35,21 @@ namespace EDDemo.Metodos_de_Ordenamiento
                 }
             }
         }
+
+        // Método para crear una lista desde un TextBox
+        private ListaSimple CrearLista(string texto)
+        {
+            ListaSimple lista = new ListaSimple();
+            string[] valores = texto.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string valor in valores)
+            {
+                lista.InsertarFinal(valor.Trim());
+            }
+
+            return lista;
+        }
+
         private void BtnGenerarArchivo1_Click(object sender, EventArgs e)
         {
             TxtArchivo1.Clear();
@@ -80,19 +95,7 @@ namespace EDDemo.Metodos_de_Ordenamiento
                 MessageBox.Show("Elemento invalido");
             }
         }
-        // Método para crear una lista desde un TextBox
-        private ListaSimple CrearLista(string texto)
-        {
-            ListaSimple lista = new ListaSimple();
-            string[] valores = texto.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
-            foreach (string valor in valores)
-            {
-                lista.InsertarFinal(valor.Trim());
-            }
-
-            return lista;
-        }
         private void BtnIntercalarArchivos_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = new Stopwatch();

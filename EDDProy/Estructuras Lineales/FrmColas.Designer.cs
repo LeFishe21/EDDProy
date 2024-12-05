@@ -76,6 +76,7 @@
             // BtDequeue
             // 
             this.BtDequeue.BackColor = System.Drawing.Color.Pink;
+            this.BtDequeue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtDequeue.Location = new System.Drawing.Point(679, 247);
             this.BtDequeue.Name = "BtDequeue";
             this.BtDequeue.Size = new System.Drawing.Size(96, 32);
@@ -86,6 +87,7 @@
             // BtBuscar
             // 
             this.BtBuscar.BackColor = System.Drawing.Color.Pink;
+            this.BtBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtBuscar.Location = new System.Drawing.Point(679, 208);
             this.BtBuscar.Name = "BtBuscar";
             this.BtBuscar.Size = new System.Drawing.Size(96, 33);
@@ -96,6 +98,7 @@
             // BtQueue
             // 
             this.BtQueue.BackColor = System.Drawing.Color.Pink;
+            this.BtQueue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtQueue.Location = new System.Drawing.Point(679, 168);
             this.BtQueue.Name = "BtQueue";
             this.BtQueue.Size = new System.Drawing.Size(96, 34);
@@ -115,7 +118,8 @@
             // BtColaVaciar
             // 
             this.BtColaVaciar.BackColor = System.Drawing.Color.Pink;
-            this.BtColaVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtColaVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtColaVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtColaVaciar.Location = new System.Drawing.Point(26, 12);
             this.BtColaVaciar.Name = "BtColaVaciar";
             this.BtColaVaciar.Size = new System.Drawing.Size(97, 48);

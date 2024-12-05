@@ -18,7 +18,7 @@ namespace EDDemo
         {
             return Top == null;
         }
-        // Método para añadir un elemento (Push)
+        // Push
         public int Push(string dato)
         {
             int operaciones = 0;
@@ -40,7 +40,7 @@ namespace EDDemo
             return operaciones;
         }
 
-        // Método para eliminar un elemento (Pop)
+        // Pop
         public (string, int) Pop()
         {
             int operaciones = 0;
@@ -60,7 +60,7 @@ namespace EDDemo
             }
         }
 
-        // Método para buscar un elemento
+        // Buscar valor especifico
         public (int, int) Buscar(string valor)
         {
             int operaciones = 0;
@@ -80,10 +80,10 @@ namespace EDDemo
                 actual = actual.Sig;
                 pos++;
             }
-            return (-1, operaciones); // No encontrado
+            return (-1, operaciones);
         }
 
-        // Método para recorrer la pila
+        // Recorrer
         public (string, int) Recorrer()
         {
             int operaciones = 0;

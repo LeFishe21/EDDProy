@@ -58,13 +58,15 @@
             // 
             this.btEnterFib.BackColor = System.Drawing.Color.Pink;
             this.btEnterFib.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btEnterFib.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEnterFib.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEnterFib.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btEnterFib.Location = new System.Drawing.Point(176, 314);
             this.btEnterFib.Name = "btEnterFib";
             this.btEnterFib.Size = new System.Drawing.Size(75, 34);
             this.btEnterFib.TabIndex = 25;
             this.btEnterFib.Text = "Ejecutar";
             this.btEnterFib.UseVisualStyleBackColor = false;
+            this.btEnterFib.Click += new System.EventHandler(this.btEnterFib_Click);
             // 
             // labelPedirNumFib
             // 

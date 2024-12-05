@@ -31,7 +31,7 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
                 }
             }
 
-            // Si alguna lista tiene elementos restantes, los agregamos
+            // Agregar elementos restantes
             while (actual1 != null)
             {
                 listaFusionada.InsertarFinal(actual1.Dato);
@@ -47,7 +47,7 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
             return listaFusionada;
         }
 
-        // Identificar runs (subsecuencias ordenadas en la lista)
+        // Identifica runs
         public static List<ListaSimple> IdentificarRuns(ListaSimple lista)
         {
             List<ListaSimple> runs = new List<ListaSimple>();
@@ -61,37 +61,36 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
             {
                 if (int.Parse(actual.Sig.Dato) >= int.Parse(actual.Dato))
                 {
-                    // La subsecuencia sigue ordenada, añadimos el siguiente valor
                     subsecuencia.InsertarFinal(actual.Sig.Dato);
                 }
                 else
                 {
-                    // Fin de la subsecuencia, la añadimos y comenzamos una nueva
+                    // Comenzar nueva subsecuencia
                     runs.Add(subsecuencia);
                     subsecuencia = new ListaSimple();
                     subsecuencia.InsertarFinal(actual.Sig.Dato);
                 }
                 actual = actual.Sig;
             }
-            runs.Add(subsecuencia); // Añadimos la última subsecuencia
+            runs.Add(subsecuencia);
             return runs;
         }
 
         // Función principal de Mezcla Natural
         public static ListaSimple FuncionMezclaNatural(ListaSimple lista)
         {
-            List<ListaSimple> subsecuencias = IdentificarRuns(lista); // Dividimos en subsecuencias ordenadas
+            List<ListaSimple> subsecuencias = IdentificarRuns(lista); // Se divide en subsecuencias ordenadas
 
             while (subsecuencias.Count > 1)
             {
-                // Fusionamos las dos primeras subsecuencias
+                // Se fusionan las primeras dos subsecuencias
                 ListaSimple listaFusionada = Mezclar(subsecuencias[0], subsecuencias[1]);
-                subsecuencias.RemoveAt(0); // Eliminamos las subsecuencias fusionadas
+                subsecuencias.RemoveAt(0); // Se eliminan las fusionadas
                 subsecuencias.RemoveAt(0);
-                subsecuencias.Insert(0, listaFusionada); // Insertamos la lista fusionada al inicio
+                subsecuencias.Insert(0, listaFusionada);
             }
 
-            return subsecuencias[0]; // Devolvemos la lista ordenada final
+            return subsecuencias[0];
         }
     }
 }

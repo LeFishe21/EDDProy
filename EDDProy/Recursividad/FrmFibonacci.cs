@@ -21,7 +21,22 @@ namespace EDDemo.Recursividad
 
         private void btEnterFib_Click(object sender, EventArgs e)
         {
+            int n;
+            // Asegúrate de que el valor ingresado sea numérico
+            if (int.TryParse(txtboxEscribirFib.Text, out n) && n >= 0)
+            {
+                // Obtener la secuencia de Fibonacci
+                string resultadoFibonacci = fibonacci.ObtenerFibonacci(n);
+                // Mostrar el resultado en el TextBox
+                textBoxResultadoFib.Text = $"La secuencia de Fibonacci hasta {n} es: {resultadoFibonacci}\n";
 
+                // Hacer visible el TextBox con el resultado
+                textBoxResultadoFib.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingresa un número entero válido y no negativo.");
+            }
         }
     }
 }

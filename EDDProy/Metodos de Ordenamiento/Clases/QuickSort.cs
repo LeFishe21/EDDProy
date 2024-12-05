@@ -9,7 +9,7 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
 {
     internal class QuickSort
     {
-        // Método principal que adapta Quicksort para ListaSimple
+        // Adapta quicksort para lista simple
         public static void FuncionQuicksort(ListaSimple lista)
         {
             if (lista.estaVacio()) return;
@@ -17,10 +17,8 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
             // Convertir la lista a un arreglo
             int[] arreglo = ConvertirListaAArreglo(lista);
 
-            // Aplicar Quicksort al arreglo
             QuicksortRecursivo(arreglo, 0, arreglo.Length - 1);
 
-            // Reconstruir la lista con los elementos ordenados
             ReconstruirListaDesdeArreglo(lista, arreglo);
         }
 
@@ -32,19 +30,18 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
 
             int i = inf;
             int j = sup;
-            int pivote = A[(inf + sup) / 2]; // Elemento pivote
+            int pivote = A[(inf + sup) / 2];
 
             while (i <= j)
             {
-                // Buscar un elemento en la izquierda mayor que el pivote
+                // Busqueda a la izquierda
                 while (A[i] < pivote)
                     i++;
 
-                // Buscar un elemento en la derecha menor que el pivote
+                // Busqueda a la derecha
                 while (A[j] > pivote)
                     j--;
 
-                // Si los índices no se han cruzado, intercambiar los elementos
                 if (i <= j)
                 {
                     int temp = A[i];
@@ -63,7 +60,7 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
                 QuicksortRecursivo(A, i, sup);
         }
 
-        // Convertir una ListaSimple a un arreglo de enteros
+        // Convierte una lista simple en un arreglo de enteros
         private static int[] ConvertirListaAArreglo(ListaSimple lista)
         {
             List<int> elementos = new List<int>();
@@ -71,21 +68,21 @@ namespace EDDemo.Metodos_de_Ordenamiento.Clases
 
             while (actual != null)
             {
-                elementos.Add(int.Parse(actual.Dato)); // Convertimos cada dato a entero
+                elementos.Add(int.Parse(actual.Dato)); // Todos los datos a entero
                 actual = actual.Sig;
             }
 
             return elementos.ToArray();
         }
 
-        // Reconstruir la lista desde un arreglo de enteros
+        // Se reconstruye la lista desde aun arreglo de enteros
         private static void ReconstruirListaDesdeArreglo(ListaSimple lista, int[] arreglo)
         {
-            lista.Vaciar(); // Vaciar la lista original
+            lista.Vaciar();
 
             foreach (int elemento in arreglo)
             {
-                lista.InsertarFinal(elemento.ToString()); // Insertar cada elemento en la lista como cadena
+                lista.InsertarFinal(elemento.ToString());
             }
         }
     }

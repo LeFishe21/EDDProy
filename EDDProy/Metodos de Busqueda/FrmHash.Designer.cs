@@ -44,7 +44,7 @@
             // LblTiempo
             // 
             this.LblTiempo.AutoSize = true;
-            this.LblTiempo.Location = new System.Drawing.Point(451, 427);
+            this.LblTiempo.Location = new System.Drawing.Point(18, 428);
             this.LblTiempo.Name = "LblTiempo";
             this.LblTiempo.Size = new System.Drawing.Size(42, 13);
             this.LblTiempo.TabIndex = 31;
@@ -54,6 +54,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Snow;
             this.label3.Location = new System.Drawing.Point(309, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 31);
@@ -62,15 +63,19 @@
             // 
             // BtnLimpiar
             // 
-            this.BtnLimpiar.Location = new System.Drawing.Point(133, 94);
+            this.BtnLimpiar.BackColor = System.Drawing.Color.Pink;
+            this.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLimpiar.Location = new System.Drawing.Point(126, 242);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(96, 23);
             this.BtnLimpiar.TabIndex = 29;
             this.BtnLimpiar.Text = "Limpiar";
-            this.BtnLimpiar.UseVisualStyleBackColor = true;
+            this.BtnLimpiar.UseVisualStyleBackColor = false;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // TxtResultado
             // 
+            this.TxtResultado.BackColor = System.Drawing.Color.Pink;
             this.TxtResultado.Location = new System.Drawing.Point(454, 123);
             this.TxtResultado.Multiline = true;
             this.TxtResultado.Name = "TxtResultado";
@@ -86,7 +91,8 @@
             // 
             // TxtClaves
             // 
-            this.TxtClaves.Location = new System.Drawing.Point(28, 123);
+            this.TxtClaves.BackColor = System.Drawing.Color.Pink;
+            this.TxtClaves.Location = new System.Drawing.Point(228, 96);
             this.TxtClaves.Multiline = true;
             this.TxtClaves.Name = "TxtClaves";
             this.TxtClaves.Size = new System.Drawing.Size(201, 317);
@@ -94,7 +100,7 @@
             // 
             // TxtProducto
             // 
-            this.TxtProducto.Location = new System.Drawing.Point(28, 71);
+            this.TxtProducto.Location = new System.Drawing.Point(21, 219);
             this.TxtProducto.Name = "TxtProducto";
             this.TxtProducto.Size = new System.Drawing.Size(201, 20);
             this.TxtProducto.TabIndex = 25;
@@ -102,45 +108,52 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(598, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Clave";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 55);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(81, 203);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 23;
             this.label1.Text = "PRODUCTO";
             // 
             // BtnBuscarClave
             // 
+            this.BtnBuscarClave.BackColor = System.Drawing.Color.Pink;
+            this.BtnBuscarClave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscarClave.Location = new System.Drawing.Point(454, 94);
             this.BtnBuscarClave.Name = "BtnBuscarClave";
             this.BtnBuscarClave.Size = new System.Drawing.Size(319, 23);
             this.BtnBuscarClave.TabIndex = 22;
             this.BtnBuscarClave.Text = "Buscar";
-            this.BtnBuscarClave.UseVisualStyleBackColor = true;
+            this.BtnBuscarClave.UseVisualStyleBackColor = false;
+            this.BtnBuscarClave.Click += new System.EventHandler(this.BtnBuscarClave_Click);
             // 
             // BtnGenerarClave
             // 
-            this.BtnGenerarClave.Location = new System.Drawing.Point(28, 94);
+            this.BtnGenerarClave.BackColor = System.Drawing.Color.Pink;
+            this.BtnGenerarClave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGenerarClave.Location = new System.Drawing.Point(21, 242);
             this.BtnGenerarClave.Name = "BtnGenerarClave";
             this.BtnGenerarClave.Size = new System.Drawing.Size(99, 23);
             this.BtnGenerarClave.TabIndex = 21;
             this.BtnGenerarClave.Text = "Generar Clave";
-            this.BtnGenerarClave.UseVisualStyleBackColor = true;
+            this.BtnGenerarClave.UseVisualStyleBackColor = false;
+            this.BtnGenerarClave.Click += new System.EventHandler(this.BtnGenerarClave_Click);
             // 
             // FrmHash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.LblTiempo);
             this.Controls.Add(this.label3);

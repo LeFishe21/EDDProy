@@ -22,7 +22,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
         {
             return first == null;
         }
-        // Método para encolar (Queue)
+        // Queue
         public int Queue(string dato)
         {
             int operaciones = 0;
@@ -44,7 +44,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return operaciones;
         }
 
-        // Método para desencolar (Dequeue)
+        // Dequeue
         public (string, int) Dequeue()
         {
             int operaciones = 0;
@@ -69,7 +69,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             }
         }
 
-        // Método para buscar un elemento en la cola
+        // Buscar elementos
         public (int, int) Buscar(string valor)
         {
             int operaciones = 0;
@@ -89,10 +89,10 @@ namespace EDDemo.Estructuras_Lineales.Clases
                 actual = actual.Sig;
                 pos++;
             }
-            return (-1, operaciones); // No encontrado
+            return (-1, operaciones);
         }
 
-        // Método para recorrer la cola
+        // Recorrer
         public (string, int) Recorrer()
         {
             int operaciones = 0;
@@ -119,7 +119,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
                 return;
             }
 
-            // Mientras haya nodos, dequeue a cada uno
+            // Vaciar todos los nodos
             while (!estaVacio())
             {
                 Dequeue();

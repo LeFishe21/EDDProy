@@ -51,41 +51,6 @@ namespace EDDemo
             mArboles.Show();
         }
 
-        private void colasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmColas mCola = new FrmColas();
-            mCola.MdiParent = this;
-            mCola.Show();
-        }
-
-        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmListasSimples mListaS = new FrmListasSimples();
-            mListaS.MdiParent = this;
-            mListaS.Show();
-        }
-
-        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmListaDobles mListaD = new FrmListaDobles();
-            mListaD.MdiParent = this;
-            mListaD.Show();
-        }
-
-        private void listaCircularToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmListasCirculares mListaC = new FrmListasCirculares();
-            mListaC.MdiParent = this;
-            mListaC.Show();
-        }
-
-        private void listaCircularDobleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmListasCircularesDobles mListaCD = new FrmListasCircularesDobles();
-            mListaCD.MdiParent = this;
-            mListaCD.Show();
-        }
-
         private void factorialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmFactorial mFactorial = new FrmFactorial();
@@ -126,6 +91,55 @@ namespace EDDemo
             FrmBusquedaBinaria mBusquedaBinaira = new FrmBusquedaBinaria();
             mBusquedaBinaira.MdiParent = this;
             mBusquedaBinaira.Show();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FrmPila mPila = new FrmPila();
+            mPila.MdiParent = this;
+            mPila.Show();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            FrmColas mCola = new FrmColas();
+            mCola.MdiParent = this;
+            mCola.Show();
+        }
+
+        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListasSimples mListaS = new FrmListasSimples();
+            mListaS.MdiParent = this;
+            mListaS.Show();
+        }
+
+        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListaDobles mListaD = new FrmListaDobles();
+            mListaD.MdiParent = this;
+            mListaD.Show();
+        }
+
+        private void listaCircularToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListasCirculares mListaC = new FrmListasCirculares();
+            mListaC.MdiParent = this;
+            mListaC.Show();
+        }
+
+        private void listaCircularDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListasCircularesDobles mListaCD = new FrmListasCircularesDobles();
+            mListaCD.MdiParent = this;
+            mListaCD.Show();
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            frmArboles mArboles = new frmArboles();
+            mArboles.MdiParent = this;
+            mArboles.Show();
         }
 
         private void burbujaToolStripMenuItem_Click(object sender, EventArgs e)

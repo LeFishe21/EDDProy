@@ -83,6 +83,7 @@
             this.BtEliminar.TabIndex = 34;
             this.BtEliminar.Text = "Pop";
             this.BtEliminar.UseVisualStyleBackColor = false;
+            this.BtEliminar.Click += new System.EventHandler(this.BtEliminar_Click);
             // 
             // BtBuscar
             // 
@@ -94,6 +95,7 @@
             this.BtBuscar.TabIndex = 33;
             this.BtBuscar.Text = "Buscar";
             this.BtBuscar.UseVisualStyleBackColor = false;
+            this.BtBuscar.Click += new System.EventHandler(this.BtBuscar_Click);
             // 
             // BtAñadir
             // 
@@ -105,6 +107,7 @@
             this.BtAñadir.TabIndex = 32;
             this.BtAñadir.Text = "Push";
             this.BtAñadir.UseVisualStyleBackColor = false;
+            this.BtAñadir.Click += new System.EventHandler(this.BtAñadir_Click);
             // 
             // TxResultado
             // 
@@ -119,13 +122,14 @@
             // 
             this.BtPilaVaciar.BackColor = System.Drawing.Color.Pink;
             this.BtPilaVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtPilaVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtPilaVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtPilaVaciar.Location = new System.Drawing.Point(24, 36);
             this.BtPilaVaciar.Name = "BtPilaVaciar";
             this.BtPilaVaciar.Size = new System.Drawing.Size(97, 48);
             this.BtPilaVaciar.TabIndex = 30;
             this.BtPilaVaciar.Text = "Limpiar";
             this.BtPilaVaciar.UseVisualStyleBackColor = false;
+            this.BtPilaVaciar.Click += new System.EventHandler(this.BtPilaVaciar_Click);
             // 
             // FrmPila
             // 

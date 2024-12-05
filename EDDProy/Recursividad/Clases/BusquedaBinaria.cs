@@ -25,7 +25,7 @@ namespace EDDemo.Recursividad.Clases
             List<int> indices = new List<int>();
 
             if (inicio > fin)
-                return indices; // El elemento no está en el arreglo
+                return indices; // Indicar que el elemento no esta en el arreglo
 
             int medio = inicio + (fin - inicio) / 2;
 
@@ -35,7 +35,7 @@ namespace EDDemo.Recursividad.Clases
                 // Agregar el índice medio
                 indices.Add(medio);
 
-                // Buscar hacia la izquierda
+                // Busqueda a la izquierda
                 int izquierda = medio - 1;
                 while (izquierda >= inicio && arreglo[izquierda] == valorBuscado)
                 {
@@ -43,7 +43,7 @@ namespace EDDemo.Recursividad.Clases
                     izquierda--;
                 }
 
-                // Buscar hacia la derecha
+                // Busqueda a la derecha
                 int derecha = medio + 1;
                 while (derecha <= fin && arreglo[derecha] == valorBuscado)
                 {
@@ -51,17 +51,17 @@ namespace EDDemo.Recursividad.Clases
                     derecha++;
                 }
 
-                // Asegurarse de que los índices estén ordenados
+                // Verificar que los indices esten ordenados
                 indices.Sort();
 
                 return indices;
             }
 
-            // Buscar en la mitad izquierda
+            // Busqueda en la mitad izquierda
             if (arreglo[medio] > valorBuscado)
                 return BuscarTodosIndices(arreglo, valorBuscado, inicio, medio - 1);
             else
-                // Buscar en la mitad derecha
+                // Busqueda en la mitad derecha
                 return BuscarTodosIndices(arreglo, valorBuscado, medio + 1, fin);
         }
     }

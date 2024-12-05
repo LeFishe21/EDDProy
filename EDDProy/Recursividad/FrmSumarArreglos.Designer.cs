@@ -58,13 +58,15 @@
             // 
             this.btEntrarArreglo.BackColor = System.Drawing.Color.Pink;
             this.btEntrarArreglo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btEntrarArreglo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEntrarArreglo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEntrarArreglo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btEntrarArreglo.Location = new System.Drawing.Point(238, 261);
             this.btEntrarArreglo.Name = "btEntrarArreglo";
             this.btEntrarArreglo.Size = new System.Drawing.Size(75, 34);
             this.btEntrarArreglo.TabIndex = 25;
             this.btEntrarArreglo.Text = "Ejecutar";
             this.btEntrarArreglo.UseVisualStyleBackColor = false;
+            this.btEntrarArreglo.Click += new System.EventHandler(this.btEntrarArreglo_Click);
             // 
             // label3
             // 

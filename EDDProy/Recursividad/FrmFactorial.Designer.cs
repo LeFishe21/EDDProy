@@ -58,13 +58,15 @@
             // 
             this.EntrarFactorial.BackColor = System.Drawing.Color.Pink;
             this.EntrarFactorial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EntrarFactorial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EntrarFactorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EntrarFactorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.EntrarFactorial.Location = new System.Drawing.Point(345, 292);
             this.EntrarFactorial.Name = "EntrarFactorial";
             this.EntrarFactorial.Size = new System.Drawing.Size(75, 34);
             this.EntrarFactorial.TabIndex = 26;
             this.EntrarFactorial.Text = "Ejecutar";
             this.EntrarFactorial.UseVisualStyleBackColor = false;
+            this.EntrarFactorial.Click += new System.EventHandler(this.EntrarFactorial_Click);
             // 
             // labelPedirNumFact
             // 

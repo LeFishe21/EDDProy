@@ -18,7 +18,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
         {
             return Cabeza == null;
         }
-        // Método para insertar al inicio de una lista
+        // Insertar al inicio
         public int InsertarInicio(string valor)
         {
             int operaciones = 0;
@@ -29,7 +29,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return operaciones;
         }
 
-        // Método para insertar al final de una lista
+        // Insertar al final
         public int InsertarFinal(string valor)
         {
             int operaciones = 0;
@@ -55,7 +55,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return operaciones;
         }
 
-        // Método para insertar en una posición específica
+        // Insertar en posición especifica
         public int InsertarPos(string valor, int pos)
         {
             int operaciones = 0;
@@ -92,7 +92,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return operaciones;
         }
 
-        // Método para eliminar el primer nodo
+        // Eliminar primer nodo
         public int EliminarTop()
         {
             int operaciones = 0;
@@ -108,7 +108,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return operaciones;
         }
 
-        // Método para eliminar un valor específico
+        // Eliminar valor especifico
         public int EliminarValor(string valor)
         {
             int operaciones = 0;
@@ -140,7 +140,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return operaciones;
         }
 
-        // Método para buscar un valor específico
+        // Buscar un valor especifico
         public (int, int) Buscar(string valor)
         {
             Nodo Actual = Cabeza;
@@ -159,7 +159,7 @@ namespace EDDemo.Estructuras_Lineales.Clases
             return (-1, operaciones);
         }
 
-        // Método para recorrer la lista
+        // Recorrer
         public (string, int) Recorrer()
         {
             int operaciones = 0;
@@ -192,35 +192,32 @@ namespace EDDemo.Estructuras_Lineales.Clases
 
             Nodo actual = Cabeza;
 
-            // Recorremos la lista y eliminamos nodo por nodo
+            // Eliminar todos los nodos
             while (actual != null)
             {
-                Nodo sig = actual.Sig; // Guardamos la referencia al siguiente nodo
-                actual.Sig = null;     // Desconectamos el nodo actual del siguiente
-                actual = sig;          // Pasamos al siguiente nodo
+                Nodo sig = actual.Sig;
+                actual.Sig = null;
+                actual = sig;
             }
 
-            // Finalmente, ponemos la cabeza en null
             Cabeza = null;
         }
         public void VaciarHash()
         {
             if (estaVacio())
             {
-                return; // Si ya está vacía, salir del método sin mostrar mensaje
+                return;
             }
 
             Nodo actual = Cabeza;
 
-            // Recorremos la lista y eliminamos nodo por nodo
             while (actual != null)
             {
-                Nodo sig = actual.Sig; // Guardamos la referencia al siguiente nodo
-                actual.Sig = null;     // Desconectamos el nodo actual del siguiente
-                actual = sig;          // Pasamos al siguiente nodo
+                Nodo sig = actual.Sig;
+                actual.Sig = null;
+                actual = sig;
             }
 
-            // Finalmente, ponemos la cabeza en null
             Cabeza = null;
         }
         public override string ToString()

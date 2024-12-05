@@ -10,15 +10,13 @@ namespace EDDemo.Recursividad.Clases
     {
         public int Pot(int bas, int pot)
         {
-            if (pot == 0)
-            //cualquier numero a la potencia 0 es 1
+            if (pot == 0) // Todo número con potencia 0 (zero) es 1
             {
                 return 1;
             }
             else
-            //ejecuto la formula a^b=a*a^b-1
             {
-                return bas * Pot(bas, pot - 1);
+                return bas * Pot(bas, pot - 1); // Realiza la formula a^b=a*a^b-1
             }
         }
     }

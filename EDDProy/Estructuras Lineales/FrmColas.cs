@@ -30,20 +30,6 @@ namespace EDDemo.Estructuras_Lineales
             long tiempoTicks = stopwatch.ElapsedTicks;
             TxInfo.Text = $"Tiempo: {tiempoMs} ms, {tiempoTicks} ticks, Operaciones: {operaciones}";
         }
-        private void BtQueue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtDequeue_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtColaVaciar_Click(object sender, EventArgs e)
         {
@@ -51,5 +37,63 @@ namespace EDDemo.Estructuras_Lineales
             ActualizarCola();
 
         }
+
+        private void BtQueue_Click(object sender, EventArgs e)
+        {
+            string dato = TxInPut.Text;  // Obtener el dato del TextBox
+            if (!string.IsNullOrEmpty(dato))
+            {
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                int operaciones = cola.Queue(dato);  // Encolar el dato
+                stopwatch.Stop();
+
+                MostrarTiempoYOperaciones(stopwatch, operaciones);
+                ActualizarCola();  // Mostrar la cola actualizada
+                TxInPut.Clear();  // Limpiar el TextBox
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor.");
+            }
+        }
+
+        private void BtBuscar_Click(object sender, EventArgs e)
+        {
+            string valor = TxInPut.Text;  // Usar el mismo TextBox para buscar
+            if (!string.IsNullOrEmpty(valor))
+            {
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                var (posicion, operaciones) = cola.Buscar(valor);
+                stopwatch.Stop();
+
+                if (posicion >= 0)
+                {
+                    MessageBox.Show("El dato " + valor + " está en la posición " + posicion);
+                }
+                else
+                {
+                    MessageBox.Show("El dato " + valor + " no se encontró en la cola.");
+                }
+
+                MostrarTiempoYOperaciones(stopwatch, operaciones);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor para buscar.");
+            }
+            ActualizarCola();  // Mostrar la cola actualizada
+        }
+
+        private void BtDequeue_Click(object sender, EventArgs e)
+        {
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            var (eliminado, operaciones) = cola.Dequeue();
+            stopwatch.Stop();
+
+            MessageBox.Show("Elemento desencolado: " + eliminado);
+            MostrarTiempoYOperaciones(stopwatch, operaciones);
+
+        }
     }
+
 }

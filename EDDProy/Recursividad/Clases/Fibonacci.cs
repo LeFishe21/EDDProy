@@ -12,7 +12,7 @@ namespace EDDemo.Recursividad.Clases
         {
             if (n == 0) return 0;
             if (n == 1) return 1;
-            return Fibo(n - 1) + Fibo(n - 2); // Llamadas recursivas 
+            return Fibo(n - 1) + Fibo(n - 2); // Recursividad 
         }
         public string ObtenerFibonacci(int n)
         {

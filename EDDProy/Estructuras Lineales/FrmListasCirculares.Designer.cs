@@ -94,32 +94,38 @@
             // BtEliminarPosicion
             // 
             this.BtEliminarPosicion.BackColor = System.Drawing.Color.Pink;
+            this.BtEliminarPosicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtEliminarPosicion.Location = new System.Drawing.Point(629, 201);
             this.BtEliminarPosicion.Name = "BtEliminarPosicion";
             this.BtEliminarPosicion.Size = new System.Drawing.Size(164, 42);
             this.BtEliminarPosicion.TabIndex = 79;
             this.BtEliminarPosicion.Text = "Eliminar una posicion";
             this.BtEliminarPosicion.UseVisualStyleBackColor = false;
+            this.BtEliminarPosicion.Click += new System.EventHandler(this.BtEliminarPosicion_Click);
             // 
             // BtBuscar
             // 
             this.BtBuscar.BackColor = System.Drawing.Color.Pink;
+            this.BtBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtBuscar.Location = new System.Drawing.Point(629, 249);
             this.BtBuscar.Name = "BtBuscar";
             this.BtBuscar.Size = new System.Drawing.Size(164, 42);
             this.BtBuscar.TabIndex = 78;
             this.BtBuscar.Text = "Buscar";
             this.BtBuscar.UseVisualStyleBackColor = false;
+            this.BtBuscar.Click += new System.EventHandler(this.BtBuscar_Click);
             // 
             // BtInsetarPosicion
             // 
             this.BtInsetarPosicion.BackColor = System.Drawing.Color.Pink;
+            this.BtInsetarPosicion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtInsetarPosicion.Location = new System.Drawing.Point(629, 153);
             this.BtInsetarPosicion.Name = "BtInsetarPosicion";
             this.BtInsetarPosicion.Size = new System.Drawing.Size(164, 42);
             this.BtInsetarPosicion.TabIndex = 77;
             this.BtInsetarPosicion.Text = "Insetar en posicion";
             this.BtInsetarPosicion.UseVisualStyleBackColor = false;
+            this.BtInsetarPosicion.Click += new System.EventHandler(this.BtInsetarPosicion_Click);
             // 
             // TxResultado
             // 
@@ -133,13 +139,15 @@
             // BtListaCVaciar
             // 
             this.BtListaCVaciar.BackColor = System.Drawing.Color.Pink;
-            this.BtListaCVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtListaCVaciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtListaCVaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtListaCVaciar.Location = new System.Drawing.Point(7, 12);
             this.BtListaCVaciar.Name = "BtListaCVaciar";
             this.BtListaCVaciar.Size = new System.Drawing.Size(97, 48);
             this.BtListaCVaciar.TabIndex = 75;
             this.BtListaCVaciar.Text = "Limpiar";
             this.BtListaCVaciar.UseVisualStyleBackColor = false;
+            this.BtListaCVaciar.Click += new System.EventHandler(this.BtListaCVaciar_Click);
             // 
             // FrmListasCirculares
             // 
@@ -160,6 +168,7 @@
             this.Controls.Add(this.BtListaCVaciar);
             this.Name = "FrmListasCirculares";
             this.Text = "FrmListaCircular";
+            this.Load += new System.EventHandler(this.FrmListasCirculares_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
